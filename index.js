@@ -6,8 +6,8 @@ class Animal {
     this.country = country;
     this.color = color;
     this.imgUrl = imgUrl;
-    }
-    
+  }
+
   feedAnimal() {}
 }
 // calling the constructor function tp craete the first object with the following values
@@ -16,7 +16,7 @@ let firstAnimal = new Animal(
   "Cheetah",
   "Iran",
   "yellow",
-  "https://pixabay.com/no/photos/gepard-dyr-dyreliv-pattedyr-3749168/"
+  "cheetah.jpeg"
 );
 // calling the constructor function to create second object
 let secondAnimal = new Animal(
@@ -24,7 +24,7 @@ let secondAnimal = new Animal(
   "Penguin",
   "Antarctica",
   "Black and white",
-  "https://pixabay.com/no/photos/antarktis-penguin-pingvin-dyr-sn%c3%b8-3427135/"
+  "pinguin.jpeg"
 );
 
 // console logging the values from the two objects craeted above
@@ -33,3 +33,16 @@ console.log(secondAnimal.color);
 console.log(firstAnimal.species);
 console.log(secondAnimal.imgUrl);
 console.log(firstAnimal.country);
+// oppgave 3: skrive ut kort til hver object
+let cheetahCard = document.getElementById("cheetah-card");
+let cheetahHeading = document.getElementById("cheetah-heading");
+let cheetahText = document.getElementById("cheetah-text");
+let cheetahButton = document.getElementById("cheetah");
+
+let img = document.createElement("img");
+cheetahCard.appendChild(img);
+img.src = firstAnimal.imgUrl;
+img.height = 160;
+
+cheetahHeading.innerHTML = firstAnimal.name;
+cheetahText.innerHTML = `Color : ${firstAnimal.color}`;
