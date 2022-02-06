@@ -8,8 +8,11 @@ class Animal {
     this.imgUrl = imgUrl;
   }
 
-  feedAnimal() {}
+  feedAnimal() {
+    alert(`${this.name} is now eating!`);
+  }
 }
+
 // calling the constructor function tp craete the first object with the following values
 let firstAnimal = new Animal(
   "Cat-Family",
@@ -46,3 +49,6 @@ img.height = 160;
 
 cheetahHeading.innerHTML = firstAnimal.name;
 cheetahText.innerHTML = `Color : ${firstAnimal.color}`;
+
+console.log(firstAnimal.feedAnimal);
+console.log(secondAnimal.feedAnimal);
